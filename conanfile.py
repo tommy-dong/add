@@ -13,11 +13,12 @@ class AddConan(ConanFile):
 
     def source(self):
         print("sourcing...")
-        copy_tree("~/Projects/test/add", ".")
+        self.run("git clone https://github.com/tommy-dong/add.git")
+        copy_tree("add", ".")
     
     def build(self):
         cmake = CMake(self) #self._configure_cmake()#CMake(self)
-        cmake.configure(source_dir="src")
+        cmake.configure(source_dir="add")
         cmake.build()
         #cmake.install()
    
