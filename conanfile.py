@@ -13,7 +13,7 @@ class AddConan(ConanFile):
 
     def source(self):
         print("sourcing...")
-        copy_tree("/Users/tommyd/Projects/test/add", ".")
+        copy_tree("~/Projects/test/add", ".")
     
     def build(self):
         cmake = CMake(self) #self._configure_cmake()#CMake(self)
