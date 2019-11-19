@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0)
+project(Main)
+include($(CMAKE_BINARY_DIR)/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+#find_package()
+add_executable(main src/main.cpp)
+target_link_libraries(main CONAN_PKG::add)
